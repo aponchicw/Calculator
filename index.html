@@ -37,13 +37,11 @@
         border-radius:5px;
       }
       .bg{
+        //background:linear-gradient(to right,green,yellow,orange,yellow,green);
         background-image: url('https://as1.ftcdn.net/jpg/00/55/73/88/500_F_55738814_lWXdAf2SPGH9fH1rpslJrP3k5EVQZ4FB.jpg');
-        height: 100%;
-        width:100%;
-        height:100%;
       }
       table{
-        padding: 5px 10px 15px 10px;
+        padding: 5px 10px;
       }
       form{
         padding:5px 5px;
@@ -53,7 +51,20 @@
       }
     </style>
     <script>
-     
+      function insert(num){
+        document.form.textview.value = document.form.textview.value+num;
+      }
+      function equal(){
+        var exp = document.form.textview.value;
+        document.form.textview.value = eval(exp);
+      }
+      function c(){
+        document.form.textview.value = " ";
+      }
+      function back(){
+        var exp = document.form.textview.value;
+        document.form.textview.value = exp.substring(0,exp.length-1);
+      }
     </script>
   <head>
     <title>HEY, here is our calculator, ag'ai!</title>
